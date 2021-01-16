@@ -1,6 +1,6 @@
-# MDJSX - Core Library
+# MDJSX
 
-MDJSX core library package
+Parse MDX syntax to JSX, and compile JSX
 
 [![TypeScript](https://badgen.net/badge/-/typescript?icon=typescript&label)](https://www.typescriptlang.org/)
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
@@ -17,11 +17,15 @@ MDJSX core library package
 Parse MDX syntax to JSX, then optionally compile the result with a JSX-specific
 version of [Bublé][1], an ES2015 compiler.
 
-## Usage
+### Installation
 
 1. Add `"@flex-development/mdjsx": "*"` to your project `dependencies`
 
 2. Run `yarn` to re-install project dependencies
+
+## Usage
+
+**TODO**: Update documentation.
 
 ## Built With
 
