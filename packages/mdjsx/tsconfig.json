@@ -7,5 +7,6 @@
   },
   "exclude": ["node_modules"],
   "extends": "../../tsconfig.json",
+  "files": ["mdjsx-env.d.ts"],
   "include": ["__test__", "src", "jest.setup.ts"]
 }

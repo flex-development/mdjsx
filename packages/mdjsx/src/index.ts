@@ -3,6 +3,7 @@
  * @author Lexus Drumgold <lex@flexdevelopment.llc>
  */
 
-export default {}
+export * from './lib'
+export * from './types'
 
 /* eslint-disable prettier/prettier */

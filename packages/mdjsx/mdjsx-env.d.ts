@@ -1,7 +1,15 @@
+
 declare module '@mdx-js/mdx' {
-  import { AnyObject } from '@flex-development/json/utils/types'
+  import { mdx } from '@mdjsx/types'
 
-  let sync: (mdxstr: string, options?: AnyObject) => string
+  const compile: mdx.TranspileAsync & {
+    createMdxAstCompiler: mdx.CreateMDXASTCompiler
+    sync: mdx.TranspileSync
+  }
 
-  export { sync }
+  export default compile
+}
+
+declare module 'buble-jsx-only' {
+  export * from 'buble'
 }
