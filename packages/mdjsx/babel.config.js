@@ -8,8 +8,6 @@ const isString = require('lodash').isString
  */
 
 module.exports = api => {
-  const env = api ? api.env() : process.env.BABEL_ENV || process.env.NODE_ENV
-
   /**
    * Updates the Babel preset configuration.
    * In non-Jest environments, ES modules will not be used.
@@ -24,8 +22,8 @@ module.exports = api => {
     // Decide if ES Modules should be compiled
     if (preset[0] === '@babel/preset-env') {
       // Don't use ES Modules in Jest environments
-      $preset[1].targets.esmodules = env !== 'jest'
-      $preset[1].modules = env === 'jest' ? 'commonjs' : false
+      $preset[1].targets.esmodules = !api.env('jest')
+      $preset[1].modules = api.env('jest') ? 'commonjs' : false
     }
 
     return $preset
@@ -37,12 +35,20 @@ module.exports = api => {
       'module-resolver',
       {
         alias: {
-          '@mdjsx': './src'
+          '@mdjsx': './src',
+          '@mdjsx-fixtures': './__test__/fixtures',
+          '@mdjsx-test-utils': './__test__/utils'
         }
       }
     ]
   ])
 
   // Return Babel options
-  return { ...rootBabelOptions, plugins, presets }
+  return {
+    ...rootBabelOptions,
+    comments: api.env('development'),
+    ignore: rootBabelOptions.ignore.concat(['src/types.ts']),
+    plugins,
+    presets
+  }
 }

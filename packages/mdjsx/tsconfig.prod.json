@@ -4,6 +4,14 @@
     "emitDeclarationOnly": true,
     "noEmit": false,
     "outDir": "./dist",
+    "plugins": [
+      {
+        "afterDeclarations": true,
+        "exclude": ["*"],
+        "transform": "@zerollup/ts-transform-paths",
+        "useRootDirs": true
+      }
+    ],
     "rootDir": "./src"
   },
   "exclude": [],
