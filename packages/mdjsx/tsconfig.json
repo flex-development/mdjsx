@@ -3,7 +3,8 @@
     "isolatedModules": true,
     "lib": ["esnext"],
     "module": "esnext",
-    "target": "esnext"
+    "target": "esnext",
+    "typeRoots": ["../../node_modules/@types", "./typings"]
   },
   "exclude": ["node_modules"],
   "extends": "../../tsconfig.json",

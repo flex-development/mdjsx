@@ -19,7 +19,13 @@ module.exports = {
   prettierPath: path.join(__dirname, '../../node_modules/prettier'),
   setupFilesAfterEnv: ['./jest.setup.ts'],
   testEnvironment: 'node',
-  testPathIgnorePatterns: ['__mocks__', '.next/', 'node_modules/', '(.*).d.ts'],
+  testPathIgnorePatterns: [
+    '__mocks__',
+    '__test__/utils',
+    'fixtures',
+    'node_modules/',
+    '(.*).d.ts'
+  ],
   transform: {
     '^.+\\.[tj]sx?$': 'ts-jest'
   },

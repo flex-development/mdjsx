@@ -1,4 +1,3 @@
-
 declare module '@mdx-js/mdx' {
   import { mdx } from '@mdjsx/types'
 
@@ -12,4 +11,11 @@ declare module '@mdx-js/mdx' {
 
 declare module 'buble-jsx-only' {
   export * from 'buble'
+}
+
+declare namespace jest {
+  interface Matchers<R> {
+    toBeJSX(): R
+    toBeTransformOutput(): R
+  }
 }
