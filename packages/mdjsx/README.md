@@ -1,4 +1,4 @@
-# KustomzCore
+# MDJSX - Core Library
 
 MDJSX core library package
 
