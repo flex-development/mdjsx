@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "isolatedModules": true,
+    "lib": ["esnext"],
+    "module": "esnext",
+    "target": "esnext"
+  },
+  "exclude": ["node_modules"],
+  "extends": "../../tsconfig.json",
+  "include": ["__test__", "src", "jest.setup.ts"]
+}

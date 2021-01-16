@@ -1,0 +1,10 @@
+# Prettier Ignore
+# See: https://prettier.io/docs/en/ignore.html
+
+**/.vercel/**
+**/node_modules/**
+**/dist/**
+
+package-lock.json
+
+*.d.ts

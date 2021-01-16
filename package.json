@@ -1,0 +1,82 @@
+{
+  "name": "@flex-development/mdjsx-root",
+  "description": "Parse MDX and transpile to JSX via utility function or API endpoint. Optionally compile JSX with Buble.",
+  "keywords": [
+    "buble-jsx-only",
+    "lerna",
+    "mdx",
+    "serverless function",
+    "typescript",
+    "vercel"
+  ],
+  "homepage": "https://github.com/flex-development/mdjsx",
+  "repository": "git://github.com/flex-development/mdjsx.git",
+  "bugs": {
+    "url": "https://github.com/flex-development/mdjsx/issues",
+    "email": "developers@flexdevelopment.llc"
+  },
+  "license": "BSD 3-Clause",
+  "author": {
+    "name": "Lexus Drumgold",
+    "email": "lex@flexdevlopment.llc",
+    "url": "https://flexdevelopment.llc"
+  },
+  "scripts": {
+    "clean": "lerna clean --yes; rm -rf node_modules/ || true; yarn",
+    "prepare": "lerna run prepare; lerna link",
+    "format": "prettier --write \"./\"",
+    "lint": "eslint . --ext js,ts --fix --cache",
+    "test:lib": "lerna run test:quiet --scope @flex-development/mdjsx",
+    "test": "run-p test:*"
+  },
+  "dependencies": {
+    "@commitlint/format": "^11.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
+    "@babel/plugin-proposal-export-default-from": "^7.12.1",
+    "@babel/plugin-proposal-export-namespace-from": "^7.12.1",
+    "@babel/plugin-proposal-throw-expressions": "^7.12.1",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-typescript": "^7.12.1",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/config-lerna-scopes": "^11.0.0",
+    "@types/jest": "^24.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.2.0",
+    "@typescript-eslint/parser": "^4.2.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.6.2",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "babel-plugin-pure-calls-annotation": "^0.3.1",
+    "dotenv-cli": "^4.0.0",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^24.0.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-tree-shaking": "^1.8.0",
+    "husky": "^4.3.0",
+    "jest": "^26.4.2",
+    "lerna": "^3.22.1",
+    "lint-staged": "^10.5.2",
+    "npm": "^6.14.7",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.5",
+    "regenerator-runtime": "^0.13.5",
+    "replace-in-file": "^6.1.0",
+    "shx": "^0.3.2",
+    "ts-node-dev": "^1.1.1",
+    "typescript": "^4.2.0-dev.20210108",
+    "yarn": "^1.22.10"
+  },
+  "resolutions": {},
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}

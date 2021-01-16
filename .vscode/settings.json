@@ -1,0 +1,14 @@
+{
+  "vsicons.associations.folders": [
+    {
+      "extensions": ["mdjsx-api"],
+      "format": "svg",
+      "icon": "api"
+    },
+    {
+      "extensions": ["mdjsx"],
+      "format": "svg",
+      "icon": "library"
+    }
+  ]
+}
