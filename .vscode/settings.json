@@ -6,6 +6,11 @@
       "icon": "api"
     },
     {
+      "extensions": ["fixtures"],
+      "format": "svg",
+      "icon": "mock"
+    },
+    {
       "extensions": ["mdjsx"],
       "format": "svg",
       "icon": "library"
