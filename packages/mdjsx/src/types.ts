@@ -1,5 +1,5 @@
 import type { TransformOptions, TransformOutput } from 'buble'
-import { Plugin, Processor } from 'unified'
+import type { Plugin, Processor } from 'unified'
 
 /**
  * @file Type Declarations

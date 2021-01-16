@@ -1,4 +1,7 @@
-import { TranspileCompileOptions, TranspileCompileResult } from '@mdjsx/types'
+import type {
+  TranspileCompileOptions,
+  TranspileCompileResult
+} from '@mdjsx/types'
 import mdx from '@mdx-js/mdx'
 import { transform } from 'buble-jsx-only'
 
