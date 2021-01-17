@@ -29,7 +29,9 @@
     "test": "BABEL_ENV=jest jest --detectOpenHandles --passWithNoTests"
   },
   "dependencies": {
-    "@flex-development/mdjsx": "*"
+    "@feathersjs/errors": "^4.5.11",
+    "@flex-development/mdjsx": "*",
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
     "@types/buble": "^0.19.2",

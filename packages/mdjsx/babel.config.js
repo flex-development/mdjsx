@@ -47,7 +47,6 @@ module.exports = api => {
   return {
     ...rootBabelOptions,
     comments: api.env('development'),
-    ignore: rootBabelOptions.ignore.concat(['src/types.ts']),
     plugins,
     presets
   }
