@@ -22,8 +22,15 @@ well as add new features.
 
 ## Making Changes
 
-**TODO**: Update documentation.
+File: `api/index.ts`
+
+At present, the MDJSX API is a single endpoint. In the event the API grows in
+complexity, a `lib` directory should be added to house additional modules.
 
 ## Testing
 
-**TODO**: Update documentation.
+**TODO**: Add unit testing workflow
+
+1. Run `yarn dev:api` from the root of the repo
+
+2. Send requests to `http://localhost:8080` or `http://localhost:8080/api`
