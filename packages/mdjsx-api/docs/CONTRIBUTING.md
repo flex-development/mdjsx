@@ -24,8 +24,8 @@ well as add new features.
 
 File: `api/index.ts`
 
-At present, the MDJSX API is a single endpoint. In the event the API grows in
-complexity, a `lib` directory should be added to house additional modules.
+At present, the MDJSX REST API is a single endpoint. In the event the API grows
+in complexity, a `lib` directory should be added to house additional modules.
 
 ## Testing
 

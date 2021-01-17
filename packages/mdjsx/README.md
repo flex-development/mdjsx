@@ -72,7 +72,7 @@ type TranspileCompileOptions = {
 ```
 
 ```typescript
-// Default options used in MDJSX API
+// Default options used in MDJSX REST API
 const options: TranspileCompileOptions = {
   buble: { objectAssign: 'Object.assign' },
   mdx: { skipExport: true }
