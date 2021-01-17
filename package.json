@@ -26,7 +26,8 @@
     "prepare": "lerna run prepare; lerna link",
     "format": "prettier --write \"./\"",
     "lint": "eslint . --ext js,ts --fix --cache",
-    "test:mdjsx": "lerna run test:quiet --scope @flex-development/mdjsx",
+    "dev:api": "lerna run dev --scope @flex-development/mdjsx-api",
+    "test:core": "lerna run test:quiet --scope @flex-development/mdjsx",
     "test": "run-p test:*"
   },
   "dependencies": {

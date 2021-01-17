@@ -22,7 +22,8 @@ the result with a JSX-specific version of [Bublé][1], an ES2015 compiler.
 This project is formatted as a monorepo. For more information on using each
 package, see below:
 
-- [@flex-development/mdjsx](packages/lib/README.md)
+- [@flex-development/mdjsx](packages/mdjsx/README.md)
+- [@flex-development/mdjsx-api](packages/mdjsx-api/README.md)
 
 ## Built With
 

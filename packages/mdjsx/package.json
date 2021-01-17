@@ -38,18 +38,17 @@
     "postcompile": "ttsc -p tsconfig.prod.json",
     "prepare": "dotenv -e .env.production -- yarn compile"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@mdx-js/mdx": "^1.6.22",
+    "buble-jsx-only": "^0.19.8"
+  },
   "devDependencies": {
     "@flex-development/json": "^1.0.5",
-    "@mdx-js/mdx": "^1.6.22",
     "@types/buble": "^0.19.2",
-    "buble-jsx-only": "^0.19.8",
     "lodash": "^4.17.15"
   },
   "peerDependencies": {
-    "@mdx-js/mdx": "^1.6.22",
-    "@types/buble": "^0.19.2",
-    "buble-jsx-only": "^0.19.8"
+    "@types/buble": "^0.19.2"
   },
   "peerDependenciesMeta": {
     "@types/buble": {

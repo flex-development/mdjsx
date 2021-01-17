@@ -1,0 +1,39 @@
+{
+  "name": "@flex-development/mdjsx-api",
+  "version": "1.0.0",
+  "description": "Parse MDX and transpile to JSX via API endpoint.",
+  "keywords": [
+    "buble-jsx-only",
+    "mdx",
+    "serverless function",
+    "typescript",
+    "vercel"
+  ],
+  "homepage": "https://github.com/flex-development/mdjsx",
+  "bugs": {
+    "url": "https://github.com/flex-development/mdjsx/issues",
+    "email": "developers@flexdevelopment.llc"
+  },
+  "license": "BSD 3-Clause",
+  "author": {
+    "name": "Lexus Drumgold",
+    "email": "lex@flexdevelopment.llc",
+    "url": "https://flexdevelopment.llc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/flex-development/mdjsx.git",
+    "directory": "packages/mdjsx-api"
+  },
+  "scripts": {
+    "dev": "vc dev -p 8080",
+    "test": "BABEL_ENV=jest jest --detectOpenHandles --passWithNoTests"
+  },
+  "dependencies": {
+    "@flex-development/mdjsx": "*"
+  },
+  "devDependencies": {
+    "@types/buble": "^0.19.2",
+    "@vercel/node": "^1.9.0"
+  }
+}
