@@ -26,7 +26,8 @@
     "directory": "packages/mdjsx-api"
   },
   "scripts": {
-    "test": "BABEL_ENV=jest jest --detectOpenHandles --passWithNoTests"
+    "test": "BABEL_ENV=jest jest --detectOpenHandles --passWithNoTests",
+    "vercel-build": "lerna run prepare; lerna link"
   },
   "dependencies": {
     "@feathersjs/errors": "^4.5.11",
