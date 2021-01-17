@@ -25,12 +25,92 @@ version of [Bublé][1], an ES2015 compiler.
 
 ## Usage
 
-**TODO**: Update documentation.
+Like the original [MDX API][1], MDJSX exposes asynchronous **and** synchronous
+modules. By default, each library function will parse a string containing MDX,
+and compile the result using Bublé.
+
+### Async API
+
+The `tc` function exposes the asynchronous Transpile Compile API:
+
+```typescript
+import { tc } from '@flex-development/mdjsx'
+
+const mdxstr = '# Hello, world!'
+
+tc(mdxstr).then(output => {
+  console.debug(output.code)
+  console.debug(output.map)
+})
+```
+
+### Sync API
+
+The `tcsync` function exposes the synchronous Transpile Compile API:
+
+```typescript
+import { tcsync } from '@flex-development/mdjsx'
+
+const mdxstr = '## Hello, World\nRamps fixie flexitarian locavore man bun.'
+
+const transform = tcsync(mdxstr)
+
+console.debug(transform.code)
+console.debug(transform.map)
+```
+
+### Transpile Compile Options
+
+Each function supports passing additional options to the MDX parser or Bublé.
+This can be done by passing an `options` object with the following shape:
+
+```typescript
+type TranspileCompileOptions = {
+  buble?: TransformOptions
+  mdx?: mdx.Options
+}
+```
+
+```typescript
+// Default options used in MDJSX API
+const options: TranspileCompileOptions = {
+  buble: { objectAssign: 'Object.assign' },
+  mdx: { skipExport: true }
+}
+```
+
+Type definitions can be [found here](./src/types.ts).
+
+### Transpile Only
+
+As mentioned previously, JSX strings are compiled by default. To prevent this
+behavior, each library function supports the `compile` argument, a `boolean`
+value indicating if the function should pass the resulting JSX to Bublé or not.
+
+```typescript
+import { TranspileCompileOptions, tc, tcsync } from '@flex-development/mdjsx'
+
+const mdxstr = '# Hello, World\n\n<Button>Click me!</Button>'
+
+const options: TranspileCompileOptions = {
+  buble: { objectAssign: 'Object.assign' },
+  mdx: { skipExport: true }
+}
+
+const compile = false
+
+// Async API
+tc(mdxstr, options, compile).then(jsx => console.debug(jsx))
+
+// Sync API
+console.debug(tcsync(mdxstr, options, compile))
+```
 
 ## Built With
 
-- [@mdx-js/mdx][1] - MDX implementation using remark
-- [buble-jsx-only][2] - JSX-specific ES2015 compiler
+- [@mdx-js/mdx][2] - MDX implementation using remark
+- [buble-jsx-only][3] - JSX-specific ES2015 compiler
 
-[1]: https://github.com/mdx-js/mdx/tree/main/packages/mdx
-[2]: https://github.com/datavis-tech/buble-jsx-only
+[1]: https://mdxjs.com/advanced/api
+[2]: https://github.com/mdx-js/mdx/tree/main/packages/mdx
+[3]: https://github.com/datavis-tech/buble-jsx-only
