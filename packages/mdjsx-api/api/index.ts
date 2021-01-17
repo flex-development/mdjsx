@@ -14,23 +14,31 @@ export interface MDJSXAPIRequest extends Omit<Req, 'body' | 'query'> {
   query: { compile?: boolean; options?: TranspileCompileOptions }
 }
 
+const BUBLE_OPTION_PREFIX = 'options.buble'
+const MDX_OPTION_PREFIX = 'options.mdx'
+
+const DEFAULT_OPTIONS = {
+  buble: { objectAssign: 'Object.assign' },
+  mdx: { skipExport: true }
+}
+
 export default ({ body, query }: MDJSXAPIRequest, res: Res): Res => {
   const { compile = true, options } = query
 
-  // Merge options object. Parse if stringified object
-  const $options = merge(isString(options) ? JSON.parse(options) : options, {
-    buble: { objectAssign: 'Object.assign' },
-    mdx: { skipExport: true }
-  })
+  // Get initial options object. Parse if stringified object
+  let $options = isString(options) ? JSON.parse(options) : options
+
+  // Merge with default options
+  $options = merge(DEFAULT_OPTIONS, $options)
 
   // Handle query[option.foo]
   Object.keys(query).forEach(key => {
-    if (key.includes('options.buble')) {
-      $options[key.replace('options.buble', '')] = query[key]
+    if (key.includes(BUBLE_OPTION_PREFIX)) {
+      $options[key.replace(BUBLE_OPTION_PREFIX, '')] = query[key]
     }
 
-    if (key.includes('options.mdx')) {
-      $options[key.replace('options.mdx', '')] = query[key]
+    if (key.includes(MDX_OPTION_PREFIX)) {
+      $options[key.replace(MDX_OPTION_PREFIX, '')] = query[key]
     }
   })
 
