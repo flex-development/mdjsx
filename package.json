@@ -15,18 +15,20 @@
     "url": "https://github.com/flex-development/mdjsx/issues",
     "email": "developers@flexdevelopment.llc"
   },
-  "license": "BSD 3-Clause",
+  "license": "BSD-3-Clause",
   "author": {
     "name": "Lexus Drumgold",
     "email": "lex@flexdevlopment.llc",
     "url": "https://flexdevelopment.llc"
   },
   "scripts": {
+    "rm:vercel": "rm -rf .vercel && mkdir .vercel",
     "clean": "lerna clean --yes; rm -rf node_modules/ || true; yarn",
     "prepare": "lerna run prepare; lerna link",
     "format": "prettier --write \"./\"",
     "lint": "eslint . --ext js,ts --fix --cache",
-    "dev:api": "lerna run dev --scope @flex-development/mdjsx-api",
+    "predev:api": "yarn rm:vercel",
+    "dev:api": "cp ~/.vercel/mdjsx.json .vercel/project.json; vc dev -l 8080",
     "test:core": "lerna run test:quiet --scope @flex-development/mdjsx",
     "test": "run-p test:*"
   },

@@ -177,20 +177,5 @@ $RECYCLE.BIN/
 
 # End of https://www.toptal.com/developers/gitignore/api/database,macos,node,windows
 
-# Builds & Distributions
-build/
-dist/
-
-# Environment variables
-.env.local
-.env.*.local
-
-# Jest
-**/__tests__/jest-test-results.json
-
-# Lerna
-*.lerna_backup
-
 # Vercel
-.now
 .vercel

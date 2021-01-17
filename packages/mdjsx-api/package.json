@@ -14,7 +14,7 @@
     "url": "https://github.com/flex-development/mdjsx/issues",
     "email": "developers@flexdevelopment.llc"
   },
-  "license": "BSD 3-Clause",
+  "license": "BSD-3-Clause",
   "author": {
     "name": "Lexus Drumgold",
     "email": "lex@flexdevelopment.llc",
@@ -26,7 +26,6 @@
     "directory": "packages/mdjsx-api"
   },
   "scripts": {
-    "dev": "vc dev -p 8080",
     "test": "BABEL_ENV=jest jest --detectOpenHandles --passWithNoTests"
   },
   "dependencies": {
