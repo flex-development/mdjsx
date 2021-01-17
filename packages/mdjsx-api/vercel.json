@@ -4,11 +4,6 @@
     "enabled": true,
     "silent": false
   },
-  "build": {
-    "env": {
-      "FORCE_BUILDER_TAG": "canary"
-    }
-  },
   "redirects": [
     {
       "source": "/repo",
