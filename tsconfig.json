@@ -19,9 +19,6 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "paths": {
-      "@flex-development/mdjsx/*": [
-        "node_modules/@flex-development/mdjsx/dist/*"
-      ],
       "@mdjsx/*": ["packages/mdjsx/src/*"],
       "@mdjsx-fixtures/*": ["packages/mdjsx/__test__/fixtures/*"],
       "@mdjsx-test-utils/*": ["packages/mdjsx/__test__/utils/*"]
