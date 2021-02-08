@@ -57,7 +57,7 @@ Transpile MDX to JSX, and compile JSX.
 - **Method**: `GET`
 - **Success Response**
 
-  ![MDJSX REST API - Transpile Only Example](./docs/example-transpile-compile.png)
+  ![MDJSX REST API - Transpile Only Example](./docs/example-transpile-only.png)
 
 ### Errors
 
