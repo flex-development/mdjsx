@@ -15,7 +15,7 @@
 
 MDJSX exposes a joint MDX transpilation and JSX compilation API via utility
 module and serverless function. Parse MDX syntax to JSX, then optionally compile
-the result with a JSX-specific version of [Bublé][1], an ES2015 compiler.
+the result with a JSX-specific version of [Bublé][2], an ES2015 compiler.
 
 ## Usage
 
